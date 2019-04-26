@@ -1,4 +1,19 @@
 export function dictonaryReplacer(dictionary: { [key: string]: string }, text: string) {
+  Object.keys(dictionary).forEach(element => {
+    text = text.replace(`$${element}$`, dictionary[element]);
+  });
+  return text;
+}
+
+export function dictonaryReplacer3(dictionary: { [key: string]: string }, text: string) {
+  function toDict(match: any) {
+    return dictionary[match.substr(1, match.length - 2)];
+  }
+  return text.replace(/\$([\w]*)\$/gi, toDict);
+
+}
+
+export function dictonaryReplacerForLoops(dictionary: { [key: string]: string }, text: string) {
   if (text.length <= 0) {
     return '';
   }
