@@ -1,0 +1,32 @@
+{
+  "name": "dojo-26-04-19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register test/**/*.ts",
+    "test:watch": "npm run test -- --watch-extensions ts --watch -R min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon-an/dojo-26-04-19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simon-an/dojo-26-04-19/issues"
+  },
+  "homepage": "https://github.com/simon-an/dojo-26-04-19#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  }
+}
